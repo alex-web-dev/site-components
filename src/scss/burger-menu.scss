@@ -1,0 +1,159 @@
+/**
+* Menu
+*/  
+.menu {
+    &__list {
+        display: flex;
+        margin: 0 -10px;
+        padding: 0;
+        list-style: none;
+    }
+  
+    &__item {
+      margin: 0 10px;
+    }
+  
+    &__link {
+        text-transform: uppercase;
+        display: block;
+        color: #333;
+        font-size: 14px;
+  
+        &:hover {
+            background: #1F1F1F;
+            color: #777;
+        }
+    }
+  
+    &_active {
+        .toggle-menu__lines {
+            margin-bottom: 4px;
+            width: 0;
+            transition: width 0s;
+        
+            &:before {
+                top: 0;
+                border-radius: 2px;
+                transform: rotate(-45deg);
+            }
+        
+            &:after {
+                border-radius: 2px;
+                top: 0;
+                transform: rotate(45deg);
+            }
+        }
+    }
+  }
+  
+  /**
+  * Menu toggle
+  */
+  .toggle-menu {
+      $toggleColor: #000;
+      $toggleLineHeight: 4px;
+      $toggleLineWidth: 30px;
+      $toggleBorderRadius: 2px;
+      $toggleTransition: .3s;
+      
+      display: none;
+      height: calc(#{$toggleLineHeight} * 5);
+      position: relative;
+      width: $toggleLineWidth;
+      cursor: pointer;
+      background: none;
+      border: none;
+    
+      &:focus {
+        outline: none;
+      } 
+    
+      &__lines {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        height: $toggleLineHeight;
+        width: $toggleLineWidth;
+        background: $toggleColor;
+        border-radius: $toggleBorderRadius;
+        transition: width $toggleTransition;
+    
+        &:before {
+          content: '';
+          position: absolute;
+          top: -200%;
+          right: 0;
+          background: $toggleColor;
+          height: $toggleLineHeight;
+          width: $toggleLineWidth;
+          border-radius: $toggleBorderRadius;
+          transition: transform $toggleTransition;
+          transform: rotate(0deg);
+    
+        }
+    
+        &:after {
+          content: '';
+          position: absolute;
+          top: 200%;
+          right: 0;
+          background: $toggleColor;
+          height: $toggleLineHeight;
+          width: $toggleLineWidth;
+          border-radius: $toggleBorderRadius;
+          transition: transform $toggleTransition;
+        }
+      }
+    
+      &_active {
+        .toggle-menu__lines {
+          margin-bottom: 4px;
+          width: 0;
+          transition: width 0s;
+    
+          &:before {
+              top: 0;
+              border-radius: 2px;
+              transform: rotate(-45deg);
+          }
+    
+          &:after {
+              border-radius: 2px;
+              top: 0;
+              transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  
+  /**
+   * Menu adaptive
+   */
+   @media screen and (max-width: 768px) {
+    .menu {
+      position: relative;
+  
+      &__list {
+        position: fixed;      
+        transform: translateX(-200%);
+        transition: transform .3s;
+        display: block;
+        margin: 0;
+      }
+  
+      &__item {
+        margin: 10px 0;
+      }
+  
+      &_active {
+        .menu__list {
+          transform: translateX(0);
+        }
+      }
+    }
+    
+    .toggle-menu {
+      display: block;
+    }
+  }

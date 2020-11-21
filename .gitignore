@@ -1,11 +1,10 @@
 node_modules
 dist
-.babelrc
-gulpfile.babel.js
-package-lock.json
-package.json
 index.html
 src/images
 src/iconsprite
 src/fonts
 src/css
+src/scss/index.scss
+src/scss/styles.scss
+src/js/common.js

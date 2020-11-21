@@ -1,8 +1,6 @@
 node_modules
 dist
 index.html
-src/images
-src/iconsprite
 src/fonts
 src/css
 src/scss/index.scss

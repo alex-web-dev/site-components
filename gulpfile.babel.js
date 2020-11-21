@@ -61,7 +61,7 @@ export const images = () => {
 }
 
 export const copy = () => {
-    return src(['src/**/*','!src/{images,js,scss,iconsprite}','!src/{images,js,scss,iconsprite}/**/*'])
+    return src(['src/**/*','!src/{images,js,scss}','!src/{images,js,scss}/**/*'])
         .pipe(dest('dist'));
 }
 
@@ -85,9 +85,22 @@ export const reload = done => {
     done();
 };
 
+export const svg = () => {
+    return src(['src/images/icons/*.svg'])
+        .pipe(svgSprite({
+            mode: {
+                stack: {
+                    sprite: "../icons.svg",
+                    example: false
+                }
+            }
+        }))
+        .pipe(dest('dist/images/icons'))
+}
+
 // export const dev = series(clean, parallel(styles, images, scripts), html, copy, replacePaths, svg, serve, watchForChanges);
 // export const build = series(clean, parallel(styles, images, scripts), html, copy, hashFiles, replacePaths, criticalCSS, svg);
 
-export const dev = series(clean, parallel(toCSS, copyJS), html, copy, serve, watchForChanges);
-export const build = series(clean, parallel(toCSS, copyJS), html, copy);
+export const dev = series(clean, parallel(toCSS, images, copyJS), html, copy, svg, serve, watchForChanges);
+export const build = series(clean, parallel(toCSS, images, copyJS), html, copy, svg);
 export default dev;

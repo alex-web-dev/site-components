@@ -2,7 +2,8 @@ node_modules
 dist
 index.html
 src/fonts
-src/css
+src/css/index.css
+src/css/styles.css
 src/scss/index.scss
 src/scss/styles.scss
 src/js/common.js

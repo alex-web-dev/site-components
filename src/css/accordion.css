@@ -1,0 +1,38 @@
+.accordion {
+  width: 500px;
+  max-width: 100%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  margin: 50px auto; }
+  .accordion__item[open] .accordion__body {
+    animation: fadeIn .5s ease-in-out; }
+  .accordion__item[open] .accordion__title:before {
+    background: url("../images/icons/angle-up.svg") center center no-repeat; }
+  .accordion__title {
+    position: relative;
+    outline-color: #f1f1f1;
+    cursor: pointer;
+    padding: 7px;
+    outline: none; }
+    .accordion__title::-webkit-details-marker {
+      display: none; }
+    .accordion__title::-moz-list-bullet {
+      list-style-type: none; }
+    .accordion__title::marker {
+      display: none; }
+    .accordion__title:before {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      content: '';
+      background: url("../images/icons/angle-down.svg") center center no-repeat;
+      width: 10px;
+      height: 10px; }
+  .accordion__body {
+    padding: 10px; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }

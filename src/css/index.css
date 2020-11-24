@@ -1,0 +1,15 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #f5f5f5; }
+
+.title {
+  text-transform: uppercase;
+  color: #555;
+  font-weight: 400; }
+
+.components__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #999; }
+  .components__link:hover {
+    color: #333; }

@@ -1,3 +1,6 @@
+body {
+  min-height: 1500px; }
+
 .up-btn {
   position: fixed;
   bottom: 50px;

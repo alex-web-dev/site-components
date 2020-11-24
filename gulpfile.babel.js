@@ -15,8 +15,6 @@ import rev from 'gulp-rev';
 import replace from 'gulp-replace';
 import penthouse from 'penthouse';
 import inject from 'gulp-inject-string';
-import ttf2woff from 'gulp-ttf2woff';
-import ttf2woff2 from 'gulp-ttf2woff2';
 import webp from 'gulp-webp';
 import svgSprite from 'gulp-svg-sprite';
 

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Components</title>
     <link rel="stylesheet" href="dist/css/index.css">
+    <link rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/styles/atom-one-light.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script> 
 </head>
 <body>
     <header class="header">
@@ -29,9 +33,9 @@
         </div>
     </header>
     <main class="main">
-        <div class="components">
-            <div class="wrapper">
-                <h1 class="title">Components</h1>
+        <div class="sidebar">
+            <div class="components">
+                <h1 class="components__title">Components</h1>
                 <div class="components__item"><a href="dist/html/header.html" class="components__link">Header</a></div>
                 <div class="components__item"><a href="dist/html/burger-menu.html" class="components__link">Burger menu</a></div>
                 <div class="components__item"><a href="dist/html/up-btn.html" class="components__link">Up btn</a></div>
@@ -40,6 +44,154 @@
                 <div class="components__item"><a href="dist/html/search.html" class="components__link">Search</a></div>
                 <div class="components__item"><a href="dist/html/footer.html" class="components__link">Footer</a></div>
             </div>
+        </div>
+        <div class="content">
+            <article class="article">
+                <header class="article__header">
+                    <h1 class="title article__title">Header</h1>
+                    <div class="article__example">
+                        <iframe src="dist/html/header.html" frameborder="0" class="article__frame"></iframe>
+                    </div>
+                </header>
+                <p class="article__title2">Source HTML</p>
+                <div class="article__source">
+                    <pre>
+                        <code class="html">
+<header class="header">
+    <div class="header__top">
+        <div class="wrapper">
+            <div class="header__top-content">
+                <div class="header__worktime">
+                    <p class="header__text">Some inf</p>
+                    <p class="header__text">00:00 - 00:00</p>
+                </div>
+                <a href="tel:+78121234567" class="header__phone">
+                    +7 (000) 123-45-67
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header__bottom">
+        <div class="wrapper">
+            <div class="header__bottom-content">
+                <a href="/" class="logo">Logo</a>
+                <nav class="menu">
+                    <button class="toggle-menu">
+                        <div class="toggle-menu__lines"></div>
+                    </button>
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="/" class="menu__link">Home</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="/" class="menu__link">About</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="/" class="menu__link">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+                        </code>
+                    </pre>
+                </div>
+                <p class="article__title2">Source SCSS</p>
+                <div class="article__source">
+                    <pre>
+                        <code class="scss">
+@import '../../node_modules/normalize.css/normalize.css';
+
+.wrapper {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+
+    &__top {
+        background: #1e1e1e;
+        z-index: 1;
+        position: relative;
+
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+    }
+
+    &__worktime {
+        display: flex;
+        margin-left: -15px;
+    }
+
+    &__text {
+        margin: 0 0 0 15px;
+        padding-right: 15px;
+        color: #777;
+        font-size: 12px;
+
+        &:not(:last-child) {
+            border-right: 1px solid #777;
+        }
+    }
+
+    &__phone {
+        position: relative;
+        color: #777;
+        font-size: 12px;
+        transition: color .2s;
+        text-decoration: none;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: url('../images/icons/icons.svg#phone');
+            width: 16px;
+            height: 16px;
+            display: block;
+            color: #777;
+        }
+
+        &:hover {
+            color: #999;
+        }
+    }
+
+    &__bottom {
+        box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
+        
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'PostNoBillsJaffna', sans-serif;
+    color: #333;
+    text-decoration: none;
+}
+                        </code>
+                    </pre>
+                </div>
+            </article>
         </div>
     </main>
     <footer class="footer">
@@ -54,5 +206,6 @@
             </div>
         </div>
     </footer>
+    <script src="dist/js/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,109 @@
+/**
+* Menu
+*/
+.menu__list {
+  display: flex;
+  padding: 0;
+  list-style: none; }
+
+.menu__item {
+  margin-right: 10px; }
+  .menu__item:last-child {
+    margin-right: 0; }
+
+.menu__link {
+  text-transform: uppercase;
+  display: block;
+  color: #333;
+  font-size: 14px; }
+  .menu__link:hover {
+    color: #777; }
+
+.menu_active .toggle-menu__lines {
+  margin-bottom: 4px;
+  width: 0;
+  transition: width 0s; }
+  .menu_active .toggle-menu__lines:before {
+    top: 0;
+    border-radius: 2px;
+    transform: rotate(-45deg); }
+  .menu_active .toggle-menu__lines:after {
+    border-radius: 2px;
+    top: 0;
+    transform: rotate(45deg); }
+
+/**
+  * Menu toggle
+  */
+.toggle-menu {
+  display: none;
+  height: calc(4px * 5);
+  position: relative;
+  width: 30px;
+  cursor: pointer;
+  background: none;
+  border: none; }
+  .toggle-menu:focus {
+    outline: none; }
+  .toggle-menu__lines {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 30px;
+    background: #000;
+    border-radius: 2px;
+    transition: width 0.3s; }
+    .toggle-menu__lines:before {
+      content: '';
+      position: absolute;
+      top: -200%;
+      right: 0;
+      background: #000;
+      height: 4px;
+      width: 30px;
+      border-radius: 2px;
+      transition: transform 0.3s;
+      transform: rotate(0deg); }
+    .toggle-menu__lines:after {
+      content: '';
+      position: absolute;
+      top: 200%;
+      right: 0;
+      background: #000;
+      height: 4px;
+      width: 30px;
+      border-radius: 2px;
+      transition: transform 0.3s; }
+  .toggle-menu_active .toggle-menu__lines {
+    margin-bottom: 4px;
+    width: 0;
+    transition: width 0s; }
+    .toggle-menu_active .toggle-menu__lines:before {
+      top: 0;
+      border-radius: 2px;
+      transform: rotate(-45deg); }
+    .toggle-menu_active .toggle-menu__lines:after {
+      border-radius: 2px;
+      top: 0;
+      transform: rotate(45deg); }
+
+/**
+   * Menu adaptive
+   */
+@media screen and (max-width: 768px) {
+  .menu {
+    position: relative; }
+    .menu__list {
+      position: fixed;
+      transform: translateX(-200%);
+      transition: transform .3s;
+      display: block;
+      margin: 0; }
+    .menu__item {
+      margin: 10px 0; }
+    .menu_active .menu__list {
+      transform: translateX(0); }
+  .toggle-menu {
+    display: block; } }

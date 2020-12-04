@@ -1,0 +1,37 @@
+@@include('./template-parts/site-header.html')
+@@include('./template-parts/sidebar.html')
+<div class="content">
+    <article class="article">
+        <header class="article__header">
+            <h1 class="title article__title">Accordion</h1>
+        </header>
+        <div class="article__example">
+@@include('./../components/html/accordion.html')
+        </div>
+        <p class="article__title2">Source HTML</p>
+        <div class="article__source">
+            <pre>
+                <code class="html">
+@@include('./../components/html/accordion.html')
+                </code>
+            </pre>
+        </div>
+        <p class="article__title2">Source SCSS</p>
+        <div class="article__source">
+            <pre>
+                <code class="scss">
+@@include('./../components/scss/accordion.scss')
+                </code>
+            </pre>
+        </div>
+        <p class="article__title2">Source JS</p>
+        <div class="article__source">
+            <pre>
+                <code class="js">
+@@include('./../components/js/accordion.js')
+                </code>
+            </pre>
+        </div>
+    </article>
+</div>
+@@include('./template-parts/site-footer.html')

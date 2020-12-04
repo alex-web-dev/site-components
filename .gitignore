@@ -1,3 +1,8 @@
 node_modules
 dist
 src/fonts
+src/css
+src/scss
+src/html
+src/js
+src/images

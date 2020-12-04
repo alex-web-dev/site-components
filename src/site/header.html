@@ -1,0 +1,29 @@
+@@include('./template-parts/site-header.html')
+@@include('./template-parts/sidebar.html')
+<div class="content">
+    <article class="article">
+        <header class="article__header">
+            <h1 class="title article__title">Header</h1>
+        </header>
+        <div class="article__example">
+@@include('./../components/html/header.html')
+        </div>
+        <p class="article__title2">Source HTML</p>
+        <div class="article__source">
+            <pre>
+                <code class="html">
+@@include('./../components/html/header.html')
+                </code>
+            </pre>
+        </div>
+        <p class="article__title2">Source SCSS</p>
+        <div class="article__source">
+            <pre>
+                <code class="scss">
+@@include('./../components/scss/header.scss')
+                </code>
+            </pre>
+        </div>
+    </article>
+</div>
+@@include('./template-parts/site-footer.html')

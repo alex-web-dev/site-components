@@ -18,7 +18,7 @@ window.addEventListener('load', function() {
 });
 
 function checkUpBtn(btn) {
-  const showOffset = 200;
+  const showOffset = 50;
   
   if(window.pageYOffset >= showOffset && btn.classList.contains('up-btn_hide')) {
     btn.classList.remove('up-btn_hide');

@@ -1,11 +1,11 @@
-const togglesMenu = document.querySelectorAll('.toggle-menu');
+const $togglesMenu = document.querySelectorAll('.toggle-menu');
 
-if (togglesMenu.length !== 0) {
-  togglesMenu.forEach((toggle) => {
+if ($togglesMenu.length !== 0) {
+  $togglesMenu.forEach((toggle) => {
     toggle.addEventListener('click', () => {
-      const thisMenu = toggle.closest('.menu');
+      const $thisMenu = toggle.closest('.menu');
 
-      thisMenu.classList.toggle('menu_active');
+      $thisMenu.classList.toggle('menu_active');
     });
   });
 }

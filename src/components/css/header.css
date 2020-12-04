@@ -1,16 +1,12 @@
-@import url(../../../node_modules/normalize.css/normalize.css);
 .wrapper {
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto; }
 
 .header {
-  position: fixed;
-  width: 100%;
-  z-index: 2; }
+  width: 100%; }
   .header__top {
     background: #1e1e1e;
-    z-index: 1;
     position: relative; }
     .header__top-content {
       display: flex;
@@ -32,14 +28,15 @@
     color: #777;
     font-size: 12px;
     transition: color .2s;
-    text-decoration: none; }
+    text-decoration: none;
+    padding-left: 25px; }
     .header__phone:before {
       content: '';
       position: absolute;
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-      background: url("../images/icons/icons.svg#phone");
+      background: url("../images/icons/phone-call.svg");
       width: 16px;
       height: 16px;
       display: block;

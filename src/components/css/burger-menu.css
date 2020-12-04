@@ -1,6 +1,8 @@
-/**
-* Menu
-*/
+.wrapper {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto; }
+
 .menu__list {
   display: flex;
   padding: 0;
@@ -32,9 +34,6 @@
     top: 0;
     transform: rotate(45deg); }
 
-/**
-  * Menu toggle
-  */
 .toggle-menu {
   display: none;
   height: calc(4px * 5);
@@ -89,9 +88,6 @@
       top: 0;
       transform: rotate(45deg); }
 
-/**
-   * Menu adaptive
-   */
 @media screen and (max-width: 768px) {
   .menu {
     position: relative; }

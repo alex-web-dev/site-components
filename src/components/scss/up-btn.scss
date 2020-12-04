@@ -1,12 +1,14 @@
+@import './base';
+
 body {
     min-height: 1500px;
 }
 
 .up-btn {
-    position: fixed;
-    bottom: 50px;
-    right: 20px;
-    z-index: 9;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
     width: 50px;
     height: 50px;
     border: none;

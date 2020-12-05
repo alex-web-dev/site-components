@@ -6,10 +6,20 @@
             <h1 class="title article__title">Header</h1>
         </header>
         <div class="article__example">
+            <div class="article__copy">
+                <button class="article__copy-btn" data-type="html">HTML</button>
+                <button class="article__copy-btn" data-type="scss">SCSS</button>
+                <button class="article__copy-btn" data-type="js">JS</button>
+            </div>
+            <div class="article__example-body">
 @@include('./../components/html/header.html')
+            </div>
         </div>
         <p class="article__title2">Source HTML</p>
         <div class="article__source">
+            <div class="article__copy">
+                <button class="article__copy-btn" data-type="html">HTML</button>
+            </div>
             <pre>
                 <code class="html">
 @@include('./../components/html/header.html')
@@ -18,11 +28,15 @@
         </div>
         <p class="article__title2">Source SCSS</p>
         <div class="article__source">
+            <div class="article__copy">
+                <button class="article__copy-btn" data-type="scss">SCSS</button>
+            </div>
             <pre>
                 <code class="scss">
 @@include('./../components/scss/header.scss')
                 </code>
             </pre>
+            <div class="article__original article__original_scss">@@include('./../components/scss/header.scss')</div>
         </div>
     </article>
 </div>

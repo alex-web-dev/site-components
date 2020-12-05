@@ -23,8 +23,17 @@ export const toCSS = () => {
 
 export const watchChanges = () => {
 	watch('src/**/*.scss', series(toCSS, copy));
-	watch('src/**images/**/*.{jpg,jpeg,png,svg,gif}', series(images));
-	watch(['src/**/*', '!src/{images,js,scss}', '!src/{images,js,scss}/**/*'], series(copy, includeFiles, reload));
+	watch('src/**/*.js', series(copy, reload));
+	watch('src/**/images/**/*.{jpg,jpeg,png,svg,gif}', series(images));
+	watch(
+		[
+			'src/**/*',
+			'!src/site/{images,js,scss}',
+			'!src/site/{images,js,scss}/**/*',
+			'!src/components/{images,js,scss}',
+			'!src/components{images,js,scss}/**/*',
+			
+		], series(copy, includeFiles, reload));
 }
 
 export const images = () => {
@@ -49,8 +58,8 @@ export const copy = () => {
 				'src/**/*',
 				'!src/{images,js,scss}',
 				'!src/{images,js,scss}/**/*',
-				'!src/site/template-parts',
-				'!src/site/template-parts/**/*'
+				'!src/site/*.html',
+				'!src/site/**/*.html'
 			]
 		)
 		.pipe(dest('dist'));

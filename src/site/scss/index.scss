@@ -144,13 +144,54 @@ img {
 
     &__example {
         margin: 30px 0;
-        padding: 15px;
+        padding: 35px 15px 15px;
         border: 4px solid #f3f3f3;
         position: relative;
+
+        &:hover {
+            .article__copy {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
     }
 
-    &__frame {
-        width: 100%;
+    &__source {
+        position: relative;
+
+        &:hover {
+            .article__copy {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__original {
+        display: none;
+        width: 0;
+    }
+
+    &__copy {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s, visibility .3s;
+
+        &-btn {
+            background: none;
+            font-size: 12px;
+            border: 1px solid #999;
+            cursor: pointer;
+            transition: color .2s, background .2s;
+
+            &:hover {
+                color: #fff;
+                background: #999;
+            }
+        }
     }
 
     &__text {
@@ -163,6 +204,7 @@ img {
 
     code {
         padding: 10px 15px;
+        line-height: 1.4;
     }
 }
 
@@ -194,3 +236,30 @@ img {
         }
     }
 }
+
+.message-popup {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility .3s;
+
+    &__text {
+        background: #1d2329;
+        color: #ffffff;
+        padding: 10px 15px;
+        box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.15);
+        display: inline-block;
+        max-width: 90%;
+        animation: fadeInOut 3s forwards;
+    }
+
+    &_show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+

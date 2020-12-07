@@ -128,20 +128,29 @@
         position: relative;
 
         &__list {
-            position: fixed;
-            transform: translateX(-200%);
-            transition: transform .3s;
+            position: absolute;
+            top: 100%;
+            right: -15px;
+            transition: all .3s;
             display: block;
             margin: 0;
+            text-align: right;
+            background: #fff;
+            box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.25);
+            width: 0;
+            overflow: hidden;
+            margin-top: 17px;
+            z-index: 2;
         }
 
         &__item {
             margin: 10px 0;
+            padding: 10px;
         }
 
         &_active {
             .menu__list {
-                transform: translateX(0);
+                width: 200px;
             }
         }
     }

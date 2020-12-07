@@ -77,3 +77,18 @@ function addMessagePopup(text, delay = 2000) {
     popup.classList.remove('message-popup_show');
   }
 }
+
+// window.addEventListener('resize', () => {
+//   const articleHeader = document.querySelector('.article__header');
+//   if(articleHeader.closest('.components')) {
+//     console.log(1);
+    
+//   } else {
+//     console.log(2);
+    
+//   }
+//   if(window.innerWidth <= 768) {
+
+//   } 
+  
+// });

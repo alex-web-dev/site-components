@@ -57,3 +57,7 @@
   font-family: 'PostNoBillsJaffna', sans-serif;
   color: #333;
   text-decoration: none; }
+
+@media screen and (max-width: 768px) {
+  .header__worktime {
+    display: none; } }

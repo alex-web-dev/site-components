@@ -8,6 +8,7 @@
 @import '../../components/scss/header.scss';
 @import '../../components/scss/footer.scss';
 
+
 $color-primary: #1d2329;
 
 * {
@@ -19,7 +20,7 @@ html, body {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
 }
@@ -54,8 +55,20 @@ img {
     &__social-links {
         margin-left: auto;
     }
+
     &__menu {
         margin-left: 30px;
+
+        .toggle-menu {
+            &__lines {
+                background: #f7f7f7;
+
+                &:before, &:after {
+                    background: #f7f7f7;
+                }
+            }
+        }
+
         .menu__link {
             color: #f1f1f1;
             text-decoration: none;
@@ -135,6 +148,8 @@ img {
 
     &__title {
         margin: 0;
+        font-weight: 600;
+        color: #353535;
     }
 
     &__title2 {
@@ -199,12 +214,16 @@ img {
     }
 
     pre {
-        margin-top: 0;
+        margin: 0;
+        overflow-x: scroll;
     }
 
     code {
         padding: 10px 15px;
         line-height: 1.4;
+        width: 800px;
+        white-space: pre;
+        font-size: 16px;
     }
 }
 
@@ -263,3 +282,4 @@ img {
     }
 }
 
+@import './media.scss';

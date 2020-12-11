@@ -1,5 +1,7 @@
 @import '../css/atom-one-light.css';
 @import '../../../node_modules/normalize.css/normalize.css';
+
+/*Components*/
 @import '../../components/scss/burger-menu.scss';
 @import '../../components/scss/tabs.scss';
 @import '../../components/scss/accordion.scss';
@@ -174,6 +176,7 @@ img {
 
     &__source {
         position: relative;
+        margin-bottom: 15px;
 
         &:hover {
             .article__copy {
@@ -195,6 +198,7 @@ img {
         opacity: 0;
         visibility: hidden;
         transition: opacity .3s, visibility .3s;
+        margin: 0 -3px;
 
         &-btn {
             background: none;
@@ -202,6 +206,7 @@ img {
             border: 1px solid #999;
             cursor: pointer;
             transition: color .2s, background .2s;
+            margin: 0 3px;
 
             &:hover {
                 color: #fff;
@@ -216,14 +221,11 @@ img {
 
     pre {
         margin: 0;
-        overflow-x: scroll;
     }
 
     code {
         padding: 10px 15px;
         line-height: 1.4;
-        width: 800px;
-        white-space: pre;
         font-size: 16px;
     }
 }

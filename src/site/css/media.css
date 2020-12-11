@@ -23,7 +23,13 @@
     padding-left: 20px;
     padding-right: 20px; }
     .article pre {
-      width: calc(100vw - 55px); } }
+      width: calc(100vw - 55px); }
+    .article code {
+      width: 800px; } }
+
+@media screen and (max-width: 992px) {
+  .article pre {
+    overflow-x: scroll; } }
 
 @media screen and (max-width: 768px) {
   .site-header {

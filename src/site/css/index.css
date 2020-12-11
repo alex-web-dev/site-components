@@ -1,5 +1,6 @@
 @import url(../css/atom-one-light.css);
 @import url(../../../node_modules/normalize.css/normalize.css);
+/*Components*/
 .wrapper {
   max-width: 1170px;
   padding: 0 15px;
@@ -602,7 +603,8 @@ img {
       opacity: 1;
       visibility: visible; }
   .article__source {
-    position: relative; }
+    position: relative;
+    margin-bottom: 15px; }
     .article__source:hover .article__copy {
       opacity: 1;
       visibility: visible; }
@@ -615,26 +617,25 @@ img {
     left: 2px;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .3s, visibility .3s; }
+    transition: opacity .3s, visibility .3s;
+    margin: 0 -3px; }
     .article__copy-btn {
       background: none;
       font-size: 12px;
       border: 1px solid #999;
       cursor: pointer;
-      transition: color .2s, background .2s; }
+      transition: color .2s, background .2s;
+      margin: 0 3px; }
       .article__copy-btn:hover {
         color: #fff;
         background: #999; }
   .article__text {
     color: #333; }
   .article pre {
-    margin: 0;
-    overflow-x: scroll; }
+    margin: 0; }
   .article code {
     padding: 10px 15px;
     line-height: 1.4;
-    width: 800px;
-    white-space: pre;
     font-size: 16px; }
 
 .site-footer {
@@ -702,7 +703,13 @@ img {
     padding-left: 20px;
     padding-right: 20px; }
     .article pre {
-      width: calc(100vw - 55px); } }
+      width: calc(100vw - 55px); }
+    .article code {
+      width: 800px; } }
+
+@media screen and (max-width: 992px) {
+  .article pre {
+    overflow-x: scroll; } }
 
 @media screen and (max-width: 768px) {
   .site-header {

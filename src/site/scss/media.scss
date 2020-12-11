@@ -38,6 +38,18 @@
         pre {
             width: calc(100vw - 55px);
         }
+
+        code {
+            width: 800px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .article {
+        pre {
+            overflow-x: scroll;
+        }
     }
 }
 

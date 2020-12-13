@@ -1,6 +1,45 @@
 @import url(../css/atom-one-light.css);
 @import url(../../../node_modules/normalize.css/normalize.css);
 /*Components*/
+.cb-form {
+  max-width: 800px;
+  border: 1px solid #c3c3c3;
+  border-radius: 5px;
+  padding: 15px; }
+  .cb-form__item {
+    margin-bottom: 20px; }
+  .cb-form__label {
+    color: #333; }
+  .cb-form__field {
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    outline-color: #63aaf5;
+    border: 1px solid #c3c3c3;
+    border-radius: 5px;
+    margin-top: 5px; }
+    .cb-form__field_area {
+      resize: none;
+      height: 90px; }
+    .cb-form__field_error {
+      border-color: #c50f0f; }
+  .cb-form__feedback {
+    font-size: 14px;
+    margin-top: 3px;
+    color: red; }
+  .cb-form__submit {
+    padding: 10px 12px;
+    background: #0964c5;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    transition: background .2s;
+    border-radius: 4px;
+    outline-color: #63aaf5;
+    outline-width: 3px; }
+    .cb-form__submit:hover {
+      background: #1b73d1; }
+
 .wrapper {
   max-width: 1170px;
   padding: 0 15px;
@@ -559,8 +598,8 @@ img {
 
 .sidebar {
   width: 300px;
-  max-width: 100%;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.15); }
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.15);
+  flex: 1 0 auto; }
   .sidebar__components {
     position: fixed;
     width: 300px; }

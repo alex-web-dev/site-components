@@ -2,6 +2,7 @@
 @import '../../../node_modules/normalize.css/normalize.css';
 
 /*Components*/
+@import '../../components/scss/callback-form.scss';
 @import '../../components/scss/burger-menu.scss';
 @import '../../components/scss/tabs.scss';
 @import '../../components/scss/accordion.scss';
@@ -110,8 +111,8 @@ img {
 
 .sidebar {
     width: 300px;
-    max-width: 100%;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.15);
+    flex: 1 0 auto;
 
     &__components {
         position: fixed;

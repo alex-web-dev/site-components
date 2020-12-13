@@ -80,7 +80,6 @@ if($articleExample) {
   if($articleJS) {
     copyOptions.js = true
     const $articleSource = $articleJS.closest('.article__source');
-    console.log($articleSource);
     
     createCopyBtns({
       parent: $articleSource,

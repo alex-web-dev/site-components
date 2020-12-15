@@ -1,6 +1,50 @@
 @import url(../css/atom-one-light.css);
 @import url(../../../node_modules/normalize.css/normalize.css);
 /*Components*/
+.modal {
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 5px; }
+  .modal__header {
+    border-bottom: 1px solid #eee;
+    padding: 15px;
+    display: flex;
+    align-items: flex-start; }
+  .modal__title {
+    font-weight: 600;
+    font-size: 18px; }
+  .modal__exit {
+    margin-left: auto;
+    background: none;
+    border: none;
+    font-weight: 700;
+    width: 40px;
+    cursor: pointer; }
+  .modal__body {
+    padding: 15px;
+    font-size: 14px; }
+  .modal__footer {
+    padding: 15px;
+    border-top: 1px solid #eee; }
+  .modal__btn {
+    padding: 10px 12px;
+    background: #0964c5;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    transition: background .2s;
+    border-radius: 4px;
+    outline-color: #63aaf5;
+    outline-width: 3px; }
+    .modal__btn:hover {
+      background: #1b73d1; }
+    .modal__btn_close {
+      background: #999;
+      outline-color: #bbb; }
+      .modal__btn_close:hover {
+        background: #777; }
+
 .cb-form {
   max-width: 800px;
   border: 1px solid #c3c3c3;
@@ -197,10 +241,6 @@
           background: #f3f3f3; }
         .tabs__nav-btn_active:hover {
           background: #fff; } }
-
-img {
-  width: 400px;
-  max-width: 100%; }
 
 .wrapper {
   max-width: 1170px;
@@ -597,9 +637,9 @@ img {
   padding-top: 60px; }
 
 .sidebar {
+  min-width: 300px;
   width: 300px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.15);
-  flex: 1 0 auto; }
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.15); }
   .sidebar__components {
     position: fixed;
     width: 300px; }

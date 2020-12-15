@@ -2,6 +2,10 @@ document.querySelectorAll('code[class="html"]').forEach(function(htmlCode) {
   htmlCode.innerHTML = convertHTML(htmlCode.innerHTML);
 });
 
+document.querySelectorAll('code[class="js"]').forEach(function(jsCode) {
+  jsCode.innerHTML = convertJS(jsCode.innerHTML);
+});
+
 const $articleCopyBtns = document.querySelectorAll('.article__copy-btn');
 $articleCopyBtns.forEach($btn => {
   $btn.addEventListener('click', () => {
@@ -16,6 +20,21 @@ function convertHTML(code) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
+}
+
+function convertJS(code) {
+  return code
+    .replace(/(?<!=)>/g, "&gt;")
+    .replace(/</g, "&lt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;")
+    .replace(/(=&gt;)/g, "=>");
+}
+
+function convertCopyJS(code) {
+  return code
+    .replace(/(&amp;)/g, "&")
+    .replace(/(=&gt;)/g, "=>");
 }
 
 function addMessagePopup(text, delay = 2000) {
@@ -52,7 +71,6 @@ function addMessagePopup(text, delay = 2000) {
 const $article = document.querySelector('.article')
 const $articleExample = $article.querySelector('.article__example');
 if($articleExample) {
-  const $articleCopy = $articleExample.querySelector('.article__copy');
   const copyOptions = {
     parent: $articleExample
   }
@@ -131,8 +149,8 @@ function copyEvent($btn) {
     const scssBlock = $article.querySelector('.article__original_scss');
     code = scssBlock ? scssBlock.innerText : errMessage = 'SCSS not found';
   } else if ($btn.dataset.type === 'js') {
-    const jsBlock = $article.querySelector('.article__original_js');
-    code = jsBlock ? jsBlock.innerText : errMessage = 'JS not found';
+    const jsBlock = $article.querySelector('.article__original_js');    
+    code = jsBlock ? convertCopyJS(jsBlock.innerHTML) : errMessage = 'JS not found';
   } else {
     addMessagePopup('Incorrect type');
     return;

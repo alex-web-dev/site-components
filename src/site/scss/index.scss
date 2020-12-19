@@ -2,6 +2,7 @@
 @import '../../../node_modules/normalize.css/normalize.css';
 
 /*Components*/
+@import '../../components/scss/modal.scss';
 @import '../../components/scss/callback-form.scss';
 @import '../../components/scss/burger-menu.scss';
 @import '../../components/scss/tabs.scss';
@@ -110,10 +111,10 @@ img {
 }
 
 .sidebar {
+    min-width: 300px;
     width: 300px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.15);
-    flex: 1 0 auto;
-
+    
     &__components {
         position: fixed;
         width: 300px;

@@ -1,17 +1,24 @@
 @import '../css/atom-one-light.css';
 @import '../../../node_modules/normalize.css/normalize.css';
 
-/*Components*/
+/*Header components*/
+@import '../../components/scss/headers/header-1.scss';
+@import '../../components/scss/headers/header-2.scss';
+
+/*Footer components*/
+@import '../../components/scss/footers/footer-1.scss';
+
+/*Form components*/
+@import '../../components/scss/forms/form-1.scss';
+
+
 @import '../../components/scss/modal.scss';
-@import '../../components/scss/callback-form.scss';
 @import '../../components/scss/burger-menu.scss';
 @import '../../components/scss/tabs.scss';
 @import '../../components/scss/accordion.scss';
 @import '../../components/scss/up-btn.scss';
 @import '../../components/scss/search.scss';
-@import '../../components/scss/header.scss';
 @import '../../components/scss/cards-list.scss';
-@import '../../components/scss/footer.scss';
 
 
 $color-primary: #1d2329;
@@ -230,6 +237,11 @@ img {
         line-height: 1.4;
         font-size: 16px;
     }
+
+    &__btn {
+        display: block;
+        width: 150px;
+    }
 }
 
 .site-footer {
@@ -284,6 +296,24 @@ img {
     &_show {
         opacity: 1;
         visibility: visible;
+    }
+}
+
+.btn {
+    padding: 10px 12px;
+    background: #0964c5;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    transition: background .2s;
+    border-radius: 4px;
+    outline-color: #63aaf5;
+    outline-width: 3px;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+        background: #1b73d1;
     }
 }
 

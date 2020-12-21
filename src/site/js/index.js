@@ -34,7 +34,10 @@ function convertJS(code) {
 function convertCopyJS(code) {
   return code
     .replace(/(&amp;)/g, "&")
-    .replace(/(=&gt;)/g, "=>");
+    .replace(/(=&gt;)/g, "=>")
+    .replace(/(&lt;)/g, "<")
+    .replace(/(&gt;=)/g, ">=")
+    
 }
 
 function addMessagePopup(text, delay = 2000) {

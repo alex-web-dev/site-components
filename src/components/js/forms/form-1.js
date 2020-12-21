@@ -1,6 +1,6 @@
-const $cbForms = document.querySelectorAll('.cb-form');
-if($cbForms.length) {
-  $cbForms.forEach(($form) => {
+const $forms = document.querySelectorAll('.form-1');
+if($forms.length) {
+  $forms.forEach(($form) => {
     $form.addEventListener('submit', (e) => {
       e.preventDefault();
 

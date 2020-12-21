@@ -1,0 +1,30 @@
+.wrapper {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto; }
+
+.header-2 {
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  padding: 10px 0; }
+  .header-2__text {
+    margin: 0 0 0 15px;
+    padding-right: 15px;
+    color: #777;
+    font-size: 12px; }
+    .header-2__text:not(:last-child) {
+      border-right: 1px solid #777; }
+  .header-2__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: 'PostNoBillsJaffna', sans-serif;
+  color: #333;
+  text-decoration: none; }
+
+@media screen and (max-width: 768px) {
+  .header__worktime {
+    display: none; } }

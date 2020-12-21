@@ -12,7 +12,7 @@ import fileInclude from 'gulp-file-include';
 const PRODUCTION = yargs.argv.prod;
 
 export const toCSS = () => {
-	return src(['src/**/scss/*.scss'])
+	return src(['src/**/*.scss'])
 		.pipe(sass().on('error', sass.logError))
 		.pipe(rename(function (path) {
 			path.dirname = path.dirname.replace('scss', 'css');
@@ -81,7 +81,7 @@ export const reload = done => {
 };
 
 export const includeFiles = () => {
-	return src(['src/site/*.html'])
+	return src(['src/site/**/*.html', '!src/site/template-parts/*.html'])
 		.pipe(fileInclude({
 			prefix: '@@',
 			basepath: '@file'

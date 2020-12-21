@@ -1,5 +1,5 @@
-@@include('./template-parts/site-header.html')
-@@include('./template-parts/sidebar.html')
+@@include('./../../template-parts/site-header.html')
+@@include('./../../template-parts/sidebar.html')
 <div class="content">
     <article class="article">
         <header class="article__header">
@@ -7,14 +7,14 @@
         </header>
         <div class="article__example">
             <div class="article__example-body">
-@@include('./../components/html/callback-form.html')
+@@include('./../../../components/html/forms/form-1.html')
             </div>
         </div>
         <p class="article__title2">Source HTML</p>
         <div class="article__source">
             <pre>
                 <code class="html">
-@@include('./../components/html/callback-form.html')
+@@include('./../../../components/html/forms/form-1.html')
                 </code>
             </pre>
         </div>
@@ -22,20 +22,20 @@
         <div class="article__source">
             <pre>
                 <code class="scss">
-@@include('./../components/scss/callback-form.scss')
+@@include('./../../../components/scss/forms/form-1.scss')
                 </code>
             </pre>
-            <div class="article__original article__original_scss">@@include('./../components/scss/callback-form.scss')</div>
+            <div class="article__original article__original_scss">@@include('./../../../components/scss/forms/form-1.scss')</div>
         </div>
         <p class="article__title2">Source JS</p>
         <div class="article__source">
             <pre>
                 <code class="js">
-@@include('./../components/js/callback-form.js')
+@@include('./../../../components/js/forms/form-1.js')
                 </code>
             </pre>
-            <div class="article__original article__original_js">@@include('./../components/js/callback-form.js')</div>
+            <div class="article__original article__original_js">@@include('./../../../components/js/forms/form-1.js')</div>
         </div>
     </article>
 </div>
-@@include('./template-parts/site-footer.html')
+@@include('./../../template-parts/site-footer.html')

@@ -1,0 +1,22 @@
+@@include('./template-parts/site-header.html')
+@@include('./template-parts/sidebar.html')
+<div class="content">
+    <article class="article">
+        <header class="article__header">
+            <h1 class="title article__title">Headers</h1>
+        </header>
+        <div class="article__example">
+            <div class="article__example-body">
+@@include('./../components/html/headers/header-1.html')
+            </div>
+        </div>
+        <a href="/dist/site/templates/headers/header-1.html" class="btn article__btn">More</a>
+        <div class="article__example">
+            <div class="article__example-body">
+@@include('./../components/html/headers/header-2.html')
+            </div>
+        </div>
+        <a href="/dist/site/templates/headers/header-2.html" class="btn article__btn">More</a>
+    </article>
+</div>
+@@include('./template-parts/site-footer.html')

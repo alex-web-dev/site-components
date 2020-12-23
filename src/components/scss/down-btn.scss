@@ -1,0 +1,51 @@
+
+.down-btn {
+    $arrowSize: 23px;
+    position: relative;
+    left: calc(50% - ( #{$arrowSize}));
+    min-height: 40px;
+    display: inline-block;
+
+    &__arrow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $arrowSize;
+        height: $arrowSize;
+        margin-left: calc(#{$arrowSize} / 2);
+        border-left: 1px solid #333;
+        border-bottom: 1px solid #333;
+        transform: rotate(-45deg);
+        animation: downBtnAnimate 1.8s infinite;
+        opacity: 0;
+        box-sizing: border-box;
+    
+        &:nth-of-type(1) {
+            animation-delay: 0s;
+        }
+    
+        &:nth-of-type(2) {
+            top: 16px;
+            animation-delay: .25s;
+        }
+    
+        &:nth-of-type(3) {
+            top: 32px;
+            animation-delay: .5s;
+        }
+    }
+}
+
+@keyframes downBtnAnimate {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+}

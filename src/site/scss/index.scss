@@ -1,5 +1,5 @@
-@import '../css/atom-one-light.css';
-@import '../../../node_modules/normalize.css/normalize.css';
+@import '../css/atom-one-light';
+@import '../../../node_modules/normalize.css/normalize';
 
 /*Header components*/
 @import '../../components/scss/headers/header-1.scss';
@@ -11,12 +11,13 @@
 /*Form components*/
 @import '../../components/scss/forms/form-1.scss';
 
-
+/*Components*/
 @import '../../components/scss/modal.scss';
 @import '../../components/scss/burger-menu.scss';
 @import '../../components/scss/tabs.scss';
 @import '../../components/scss/accordion.scss';
 @import '../../components/scss/up-btn.scss';
+@import '../../components/scss/down-btn.scss';
 @import '../../components/scss/search.scss';
 @import '../../components/scss/cards-list.scss';
 
